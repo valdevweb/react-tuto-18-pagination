@@ -11,3 +11,11 @@
 ###  apprentissages mis en application :
     -   custom hook (useFetch)
     -   utilisation de `Array.from` pour découper un tableau en tableau de tableaux d'une certaine dimension
+
+
+```javascript
+const newFollowers = Array.from({ length: numberOfPages }, (_, index) => {
+    const start = index * itemsPerPage;
+    return followers.slice(start, start + itemsPerPage);
+});
+```
